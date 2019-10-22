@@ -42,7 +42,7 @@ function createIcon(className,fn,id){
 }
 function trash(){
     let id =this.getAttribute('data-itemid');
-//    itemOperations.markUnMark(id);
+    itemOperations.markUnMark(id);
 //    showtOTAL();
     let tr =this.parentNode.parentNode;
     tr.classList.toggle('alert-danger');
@@ -53,7 +53,7 @@ function deleteRecords(){
     printTable(items);
 }
 function printTable(items){
-    var tbody = document.querySelector('items');
+    var tbody = document.querySelector('#items');
     tbody.innerHTML = '';
     items.forEach(item=>printRecord(item));
 
