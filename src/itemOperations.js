@@ -7,13 +7,22 @@ const itemOperations = {
             this.items=this.items.filter(itemObject=>!itemObject.isMarked);
             return this.items;
     },
-    search(){
-
+    search(id){
+            return this.items.find(itemObject.itemObject.id==id);
     },
+    searchAll(){
+            
+    },
+    markUnMark(id){
+    if(this.search(id).isMarked==true)
+        this.search(id).isMarked=false;
+    else
+        this.search(id).isMarked=true;
+    }
     sort(){
 
     },
     update(){
 
-    },
+    }
 }
